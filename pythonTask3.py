@@ -1,5 +1,6 @@
 #Welcome to your favorite guessing game!
 
+#The function for level easy
 def easy():
   secret_number=7
   guess_count=0
@@ -36,10 +37,13 @@ def easy():
     except ValueError:
       print ("Please, enter a number")
    
+  else:
+    print("Game Over")
+    
   
-  print("Game Over")
   
-  #easy()
+  
+#The function for level medium
 
 def medium():
   secret_number=19
@@ -77,12 +81,13 @@ def medium():
     except ValueError:
       print ("Please, enter a number")
    
-  
-  print("Game Over")
+  else:
+    print("Game Over")
 
 
-#medium()
 
+
+#The function for level hard
 
 def hard():
   secret_number=35
@@ -120,10 +125,10 @@ def hard():
     except ValueError:
       print ("Please, enter a number")
    
+  else:
+    print("Game Over")
   
-  print("Game Over")
-  
-#hard()
+
 
 
 #If the user finishes playing a level,and still to continue.
@@ -138,12 +143,12 @@ Choose another level:
     
  or quit
 """)
-  #level =""
+  
   chosen_level = input().lower()
   levels = ["easy", "medium", "hard", "quit"]
 
   for level in levels:
-    #print (level)
+    
     if chosen_level == "easy":
       easy()
       break
@@ -178,12 +183,12 @@ Choose yourlevel:
     >Hard
 
 """)
-  #level =""
+  
   chosen_level = input().lower()
   levels = ["easy", "medium", "hard"]
 
   for level in levels:
-    #print (level)
+    
     if chosen_level == "easy":
       easy()
       break
